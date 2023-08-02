@@ -18,7 +18,8 @@ For each segment, the leading- and trailing-edge noise is calculated as uncorrel
 
 The coordinate system in the fixed reference frame of the wind turbine is $Z_\mathrm{WT}$ is perpendicular to the rotor plane, positive in the downwind direction, and $Y_\mathrm{WT}$ is the vertical direction, positive upwards. $\Psi=0$ is aligned with $X_\mathrm{WT}$-axis. The origin of the coordinate system is the wind turbine hub, as shown in this figure:
 
-![Inputs.](Inputs.PNG "This is a sample image.")
+![Inputs.](windturbine_coordinate_system.png "This is a sample image.")
+
 
 For the noise prediction of each segment, the location of the observer is transformed in the coordinates of Amiet's theory by: 
 
