@@ -1,0 +1,25 @@
+PLOP
+G F
+
+load
+FFA_W3-301.dat
+ oper
+visc
+6.07001e+06
+mach 0.0776313
+iter 1000
+vpar
+N 
+9.0046
+
+vpar
+xtr
+0.065
+0.065
+
+alfa 3.42543
+cpwr  XFOIL_CP_Output
+DUMP XFOIL_Output
+
+ 
+ quit
