@@ -58,7 +58,7 @@ The models implemented to calculate the wall-pressure spectrum are:
 
 ## To run the code for the aerodynamic inputs averaged over one rotation:
 The main script to run is ``Main_strip_theory.m``. This will open a dialog box:
-![Inputs.](Inputs.png "This is a sample image.")
+![Inputs.](Inputs.PNG "This is a sample image.")
 
 where:
 * ``U_inf`` is the inflow velocity in m/s
