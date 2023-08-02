@@ -17,7 +17,7 @@ The noise produced by the wind turbine is calculated using strip theory, where t
 For each segment, the leading- and trailing-edge noise is calculated as uncorrelated noise sources using Amiet's method for both noise sources for 2D airfoils. The effect of the rotation is incorporated using the resultant tangential velocity for each segment obtained from the aeordynamic simulations. If the user does not have this information it can be conputed as the vectorial sum of the inflow velocity and the rotational speed at each segment. Afterward, the total noise of the blade is calculated as the sum of the total noise of each segment. This procedure is done for each angular position $\Psi$. 
 
 The coordinate system in the fixed reference frame of the wind turbine is $Z_\mathrm{WT}$ is perpendicular to the rotor plane, positive in the downwind direction, and $Y_\mathrm{WT}$ is the vertical direction, positive upwards. $\Psi=0$ is aligned with $X_\mathrm{WT}$-axis. The origin of the coordinate system is the wind turbine hub, as shown in this figure:
-![Coordinatesystem.](windturbine_coordinate_system.PNG "This is a sample image.")
+![Coordinatesystem.](windturbine_coordinate_system.png "This is a sample image.")
 
 
 For the noise prediction of each segment, the location of the observer is transformed in the coordinates of Amiet's theory by: 
@@ -161,6 +161,8 @@ The figure below shows the comparison between the noise prediction using the ave
 ## Funding Sources
 This research received financial support from the European Commission through the H2020-MSCA-ITN-209 project zEPHYR (grant agreement No 860101).  
 
+## Acknowledgments
+The author would like to thank to Ing. Ir. Andrea Bresciani for all the support in validating Amiet's code. We are also thankful with Ing. Ir. Oscar Mariño for providing the aerodynamic simulations for the wind turbine noise prediction of the test case and preparing the final version of the code. Futhermore, we would like to thank Ing. Ir. Fernanda L. dos Santos for all the support through the development of the code. 
 
 ## References
 [1] Amiet, R., “Noise due to turbulent flow past a trailing edge,” Journal of Sound and Vibration, Vol. 47, No. 3, 1976, pp. 387–393. https://doi.org/10.1016/0022-460X(76)90948-2.
