@@ -17,8 +17,7 @@ The noise produced by the wind turbine is calculated using strip theory, where t
 For each segment, the leading- and trailing-edge noise is calculated as uncorrelated noise sources using Amiet's method for both noise sources for 2D airfoils. The effect of the rotation is incorporated using the resultant tangential velocity for each segment obtained from the aeordynamic simulations. If the user does not have this information it can be conputed as the vectorial sum of the inflow velocity and the rotational speed at each segment. Afterward, the total noise of the blade is calculated as the sum of the total noise of each segment. This procedure is done for each angular position $\Psi$. 
 
 The coordinate system in the fixed reference frame of the wind turbine is $Z_\mathrm{WT}$ is perpendicular to the rotor plane, positive in the downwind direction, and $Y_\mathrm{WT}$ is the vertical direction, positive upwards. $\Psi=0$ is aligned with $X_\mathrm{WT}$-axis. The origin of the coordinate system is the wind turbine hub, as shown in this figure:
-![Coordinatesystem.](windturbine_coordinate_system.png "This is a sample image.")
-
+![Inputs.](Inputs.PNG "This is a sample image.")
 
 For the noise prediction of each segment, the location of the observer is transformed in the coordinates of Amiet's theory by: 
 
