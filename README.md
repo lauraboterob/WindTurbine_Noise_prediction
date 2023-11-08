@@ -99,6 +99,11 @@ In the folder ``.\Inputs\`` two files are needed:
 
 In the main folder the user would need to place the coordinates of the several airfoils along the wind turbine blade. They should be in ``.dat`` in a format readble for XFOIL. **It is important to be sure that in the file there is the name of the airfoil (it can be any) before the coordinates. Otherwise, the user would need to modify the ``XFOIL_new_airfoil.m`` script. Also, the name of the ``.dat`` filed needs to be exactly the same of the table ``dataraw_bladeelement.csv``**.
 
+## To run the code with the atmospheric absorption:
+This main script considers having an atmospheric attenuation following the ANSI/ASA S1.26 standard [17] for atmospheric attenuation of a pure tone frequency. In this case, the results are given only in 1/3 octave. 
+
+The methodology for running this version is exactly as before. The script that needs to be run is: ``Main_strip_theory_atm_abs.m``.
+
 ## To run the code with the instantaneous aerodynamic inputs:
 The main objective of this alternative code is to consider variations in the noise production of the wind turbine due to changes in the aerodynamic loading. 
 
@@ -182,4 +187,5 @@ The author would like to thank to Ing. Ir. Andrea Bresciani for all the support 
 [14] Christophe, Julien, Buckingham, Sophia, Schram, Christophe, & Oerlemans, Stefan. (2022). zEPHYR - Large On Shore Wind Turbine Benchmark (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7323750
 [15] Ferrer, E., Rubio, G., Ntoukas, G., Laskowski, W., Mariño, O., Colombo, S., Mateo-Gabín, A., Marbona, H., Manrique de Lara, F., Huergo, D., Manzanero, J., Rueda-Ramírez, A., Kopriva, D., and Valero, E., “Image 1: A high-order discontinuous Galerkin solver for flow simulations and multi-physics applications,” Computer Physics Communications, Vol. 287, 2023, p.108700. https://doi.org/https://doi.org/10.1016/j.cpc.2023.108700, URL https://www.sciencedirect.com/science/article/pii/S0010465523000450.
 [16] Marino, O. A., Ferrer, E., Valero, E., and Ferret, O., Aeroacoustic simulations of 3D airfoil sections using a high order discontinuous Galerkin solver, https://doi.org/10.2514/6.2022-0413, URL https://arc.aiaa.org/doi/abs/10.2514/6.2022-0413.
+[17] ANSI/ANSA. Methods for calculation of the absoption of sound by the atmosphere. Tech. Rep. ANSI/ANSA S1.26-2014. American National Standards Institue Melville, 2014.
 
