@@ -143,7 +143,7 @@ The main objective of this alternative code is to consider variations in the noi
 ## Outputs:
 The code presents some plots with the power spectrum density of the far-field noise at the wind turbine noise location in dB and dBA in the narrowband frequency and in dBA in 1/m of octave. It also saves .mat files with the far-field noise in pa^2 for the case of averaged results.
 
-For the case of instantanoeus results the code saves:
+For the case of instantaneous results the code saves:
 * ``S_pp_blade_inst`` that is the far-field noise in pa^2 of each blade at each azimuth location
 * ``S_pp_total_rot_blade_inst`` is the far-field noise in pa^2 of each blade integrated over one rotation
 * ``S_pp_total_rot_inst`` is the far-field noise in pa^2 of the entire wind turbine over one rotation
@@ -158,17 +158,17 @@ The operational conditions are:
 * Lambda = 300 m 
 * Pitch = 5 deg
 
-The aerodynamic results are obatined using the Actuator line simulations performed in HORSES3D, a high-order discontinuous Galerkin spectral element method [15,16]. The averaged results are in the ``.\Inputs\`` and the instantaneous results are in ``.\2 - AL_inputs``. 
+The aerodynamic results are obtained using the Actuator line simulations performed in HORSES3D, a high-order discontinuous Galerkin spectral element method [15,16]. The averaged results are in the ``.\Inputs\``, and the instantaneous results are in ``.\2 - AL_inputs``. 
 
 ![Results.](Cond3_github.png "This is a sample image.")
 
-The figure below shows the comparison between the noise prediction using the averaged and instantaneous reuslts and the measurements. The poor agreement in the high-frequency range is due to the atmospheric abosption that can be implemented in the code. This is part of the future works. 
+The figure below shows the comparison between the noise prediction using the averaged and instantaneous results and the measurements. The poor agreement in the high-frequency range is due to the atmospheric absorption. The results are significantly improved by considering the atmospheric attenuation. 
 
 ## Funding Sources
 This research received financial support from the European Commission through the H2020-MSCA-ITN-209 project zEPHYR (grant agreement No 860101).  
 
 ## Acknowledgments
-The author would like to thank to Ing. Ir. Andrea Bresciani for all the support in validating Amiet's code. We are also thankful with Ing. Ir. Oscar Mariño for providing the aerodynamic simulations for the wind turbine noise prediction of the test case and preparing the final version of the code. Futhermore, we would like to thank Ing. Ir. Fernanda L. dos Santos for all the support through the development of the code. 
+The author would like to thank Ing. Ir. Andrea Bresciani for all the support in validating Amiet's code. We are also thankful to Ing. Ir. Oscar Mariño for providing the aerodynamic simulations for the wind turbine noise prediction of the test case and preparing the final version of the code. Furthermore, we would like to thank Ing. Ir. Fernanda L. dos Santos for all the support through the development of the code. 
 
 ## References
 [1] Amiet, R., “Noise due to turbulent flow past a trailing edge,” Journal of Sound and Vibration, Vol. 47, No. 3, 1976, pp. 387–393. https://doi.org/10.1016/0022-460X(76)90948-2.
