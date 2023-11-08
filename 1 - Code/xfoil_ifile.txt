@@ -2,11 +2,11 @@ PLOP
 G F
 
 load
-FFA_W3-301.dat
+NACA_63-218.dat
  oper
 visc
-6.07001e+06
-mach 0.0776313
+3.61393e+06
+mach 0.238231
 iter 1000
 vpar
 N 
@@ -17,7 +17,7 @@ xtr
 0.065
 0.065
 
-alfa 3.42543
+alfa 3.18552
 cpwr  XFOIL_CP_Output
 DUMP XFOIL_Output
 
