@@ -99,6 +99,11 @@ In the folder ``.\Inputs\`` two files are needed:
 
 In the main folder the user would need to place the coordinates of the several airfoils along the wind turbine blade. They should be in ``.dat`` in a format readble for XFOIL. **It is important to be sure that in the file there is the name of the airfoil (it can be any) before the coordinates. Otherwise, the user would need to modify the ``XFOIL_new_airfoil.m`` script. Also, the name of the ``.dat`` filed needs to be exactly the same of the table ``dataraw_bladeelement.csv``**.
 
+## To run the code with the atmospheric absorption:
+This main script considers having an atmospheric attenuation following the ANSI/ASA S1.26 standard [17] for atmospheric attenuation of a pure tone frequency. In this case, the results are given only in 1/3 octave. 
+
+The methodology for running this version is exactly as before. The script that needs to be run is: ``Main_strip_theory_atm_abs.m``.
+
 ## To run the code with the instantaneous aerodynamic inputs:
 The main objective of this alternative code is to consider variations in the noise production of the wind turbine due to changes in the aerodynamic loading. 
 
@@ -138,7 +143,7 @@ The main objective of this alternative code is to consider variations in the noi
 ## Outputs:
 The code presents some plots with the power spectrum density of the far-field noise at the wind turbine noise location in dB and dBA in the narrowband frequency and in dBA in 1/m of octave. It also saves .mat files with the far-field noise in pa^2 for the case of averaged results.
 
-For the case of instantanoeus results the code saves:
+For the case of instantaneous results the code saves:
 * ``S_pp_blade_inst`` that is the far-field noise in pa^2 of each blade at each azimuth location
 * ``S_pp_total_rot_blade_inst`` is the far-field noise in pa^2 of each blade integrated over one rotation
 * ``S_pp_total_rot_inst`` is the far-field noise in pa^2 of the entire wind turbine over one rotation
@@ -153,17 +158,17 @@ The operational conditions are:
 * Lambda = 300 m 
 * Pitch = 5 deg
 
-The aerodynamic results are obatined using the Actuator line simulations performed in HORSES3D, a high-order discontinuous Galerkin spectral element method [15,16]. The averaged results are in the ``.\Inputs\`` and the instantaneous results are in ``.\2 - AL_inputs``. 
+The aerodynamic results are obtained using the Actuator line simulations performed in HORSES3D, a high-order discontinuous Galerkin spectral element method [15,16]. The averaged results are in the ``.\Inputs\``, and the instantaneous results are in ``.\2 - AL_inputs``. 
 
 ![Results.](Cond3_github.png "This is a sample image.")
 
-The figure below shows the comparison between the noise prediction using the averaged and instantaneous reuslts and the measurements. The poor agreement in the high-frequency range is due to the atmospheric abosption that can be implemented in the code. This is part of the future works. 
+The figure below shows the comparison between the noise prediction using the averaged and instantaneous results and the measurements. The poor agreement in the high-frequency range is due to the atmospheric absorption. The results are significantly improved by considering the atmospheric attenuation. 
 
 ## Funding Sources
 This research received financial support from the European Commission through the H2020-MSCA-ITN-209 project zEPHYR (grant agreement No 860101).  
 
 ## Acknowledgments
-The author would like to thank to Ing. Ir. Andrea Bresciani for all the support in validating Amiet's code. We are also thankful with Ing. Ir. Oscar Mariño for providing the aerodynamic simulations for the wind turbine noise prediction of the test case and preparing the final version of the code. Futhermore, we would like to thank Ing. Ir. Fernanda L. dos Santos for all the support through the development of the code. 
+The author would like to thank Ing. Ir. Andrea Bresciani for all the support in validating Amiet's code. We are also thankful to Ing. Ir. Oscar Mariño for providing the aerodynamic simulations for the wind turbine noise prediction of the test case and preparing the final version of the code. Furthermore, we would like to thank Ing. Ir. Fernanda L. dos Santos for all the support through the development of the code. 
 
 ## References
 [1] Amiet, R., “Noise due to turbulent flow past a trailing edge,” Journal of Sound and Vibration, Vol. 47, No. 3, 1976, pp. 387–393. https://doi.org/10.1016/0022-460X(76)90948-2.
@@ -182,4 +187,5 @@ The author would like to thank to Ing. Ir. Andrea Bresciani for all the support 
 [14] Christophe, Julien, Buckingham, Sophia, Schram, Christophe, & Oerlemans, Stefan. (2022). zEPHYR - Large On Shore Wind Turbine Benchmark (1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7323750
 [15] Ferrer, E., Rubio, G., Ntoukas, G., Laskowski, W., Mariño, O., Colombo, S., Mateo-Gabín, A., Marbona, H., Manrique de Lara, F., Huergo, D., Manzanero, J., Rueda-Ramírez, A., Kopriva, D., and Valero, E., “Image 1: A high-order discontinuous Galerkin solver for flow simulations and multi-physics applications,” Computer Physics Communications, Vol. 287, 2023, p.108700. https://doi.org/https://doi.org/10.1016/j.cpc.2023.108700, URL https://www.sciencedirect.com/science/article/pii/S0010465523000450.
 [16] Marino, O. A., Ferrer, E., Valero, E., and Ferret, O., Aeroacoustic simulations of 3D airfoil sections using a high order discontinuous Galerkin solver, https://doi.org/10.2514/6.2022-0413, URL https://arc.aiaa.org/doi/abs/10.2514/6.2022-0413.
+[17] ANSI/ANSA. Methods for calculation of the absoption of sound by the atmosphere. Tech. Rep. ANSI/ANSA S1.26-2014. American National Standards Institue Melville, 2014.
 

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+preferred-citation:
+  authors:
+    - family-names: Botero-Bolívar
+      given-names: Laura
+  doi: 10.5281/zenodo.8325973
+  month: 9
+  title: " Wind turbine noise prediction"
+  type: software
+  year: 2023
